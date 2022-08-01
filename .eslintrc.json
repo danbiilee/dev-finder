@@ -1,5 +1,5 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["plugin:storybook/recommended", "next/core-web-vitals"],
   "rules": {
     "import/order": [
       "error",
