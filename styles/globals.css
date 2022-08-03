@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -10,4 +10,13 @@
     color: white;
     background: black;
   }
+} */
+
+body {
+  @apply dark:bg-indigo-900 dark:text-white;
+  @apply h-screen text-sm;
+}
+
+#__next {
+  @apply h-full;
 }
