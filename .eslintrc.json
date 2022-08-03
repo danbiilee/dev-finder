@@ -19,7 +19,11 @@
             "position": "before"
           },
           {
-            "pattern": "{**/*.css}",
+            "pattern": "./**/*css",
+            "group": "unknown"
+          },
+          {
+            "pattern": "../**/*css",
             "group": "unknown"
           }
         ],
