@@ -1,11 +1,25 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import { useEffect } from 'react';
 
 import styles from '../styles/Home.module.css';
 
 import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
+  useEffect(() => {
+    // TODO: function 분리하기
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (
+      localStorage['df-theme'] === 'dark' ||
+      (!('df-theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
