@@ -105,3 +105,6 @@ dist
 
 # storybook
 stories/
+
+# IDE
+.idea/
