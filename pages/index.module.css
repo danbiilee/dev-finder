@@ -1,0 +1,10 @@
+.container {
+  @apply flex flex-col items-center justify-center h-full;
+}
+
+.main {
+  @apply w-[40.625rem];
+}
+
+.footer {
+}
